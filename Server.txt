@@ -1,0 +1,9 @@
+<connectionStrings>
+	<add name="DefaultConnection" connectionString="Server=SYSTEM-NAME\SQLEXPRESS;Database=MvcStudentDb;Trusted_Connection=True;" providerName="System.Data.SqlClient"/>
+</connectionStrings>
+
+Enable-Migrations
+Add-Migration InitialCreate
+Update-Database
+
+@Html.DropDownListFor(model => model.Department, new SelectList(new[] { "DAC", "DBDA", "DITISS", "ESD" }), "-- Select Department --", new { @class = "form-control" })
