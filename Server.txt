@@ -13,3 +13,10 @@ Update-Database
     @Html.DropDownListFor(model => model.BrandId, (SelectList)ViewBag.BrandId, "-- Select Brand --", new { @class = "form-control" })
     @Html.ValidationMessageFor(model => model.BrandId)
 </div>
+
+INSERT INTO [dbo].[Brands] ([BrandName])
+VALUES 
+    ('Samsung'),
+    ('Sony'),
+    ('LG'),
+    ('OnePlus');
