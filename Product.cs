@@ -7,6 +7,7 @@ public class Product
 
     [Required(ErrorMessage = "Product name is required")]
     [StringLength(100)]
+    [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "Product name must contain only letters and spaces")]
     public string Name { get; set; }
 
     [Required(ErrorMessage = "Rate is required")]
