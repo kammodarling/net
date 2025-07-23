@@ -1,1 +1,40 @@
-Hello
+using System;
+
+// Base class
+class Person
+{
+    public string Name;
+    public int Age;
+
+    public void DisplayPerson()
+    {
+        Console.WriteLine("Name: " + Name);
+        Console.WriteLine("Age: " + Age);
+    }
+}
+
+// Derived class
+class Student : Person
+{
+    public int RollNo;
+
+    public void DisplayStudent()
+    {
+        Console.WriteLine("Roll No: " + RollNo);
+    }
+}
+
+// Main Program
+class Program
+{
+    static void Main()
+    {
+        Student s = new Student();
+        s.Name = "John";
+        s.Age = 20;
+        s.RollNo = 101;
+
+        s.DisplayPerson();    // Inherited method
+        s.DisplayStudent();   // Own method
+    }
+}
