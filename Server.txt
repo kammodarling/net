@@ -7,3 +7,9 @@ Add-Migration InitialCreate
 Update-Database
 
 @Html.DropDownListFor(model => model.Department, new SelectList(new[] { "DAC", "DBDA", "DITISS", "ESD" }), "-- Select Department --", new { @class = "form-control" })
+
+<div class="form-group">
+    @Html.LabelFor(model => model.BrandId)
+    @Html.DropDownListFor(model => model.BrandId, (SelectList)ViewBag.BrandId, "-- Select Brand --", new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.BrandId)
+</div>
